@@ -1,0 +1,15 @@
+.Profile{
+    position: relative;
+    display: grid;
+    grid-template-columns: 18rem auto 20rem;
+    gap: 1rem;
+}
+/* .logo{
+    display: flex;
+
+} */
+.search{
+    display: flex;
+    margin-left: 75rem;
+    margin-top: -1rem
+}
