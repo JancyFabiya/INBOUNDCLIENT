@@ -23,7 +23,7 @@ const Chat = () => {
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io("https://inboundmedia.netlify.app");
+    socket.current = io("http://localhost:8800");
     socket.current.emit("new-user-add", user._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
@@ -84,6 +84,7 @@ const Chat = () => {
           {chats.map((chat) => {
             // <div>
             return (
+              <>
               <div
                 className="conversation"
                 onClick={() => setCurrentChat(chat)}
@@ -93,7 +94,10 @@ const Chat = () => {
                   currentUserId={user._id}
                   online={checkOnlineStatus(chat)}
                 />
+                
               </div>
+      <hr style={{ border: "0.1px solid " }} />
+      </>
               // if (person._id !== user._id) {
               //   return <ChatUsers person={person} key={id} />;
               // }

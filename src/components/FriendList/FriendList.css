@@ -1,0 +1,36 @@
+.frndlist{
+    display: flex;
+    /* position: relative; */
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+}
+/* .fnoti{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fnoti>div{
+    display: flex;
+    gap: 10px;
+}
+.fImg{}
+.fname{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: bold;
+
+}
+.fbutn{
+    height: 2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    cursor: pointer;
+    background: transparent;
+} */

@@ -3,6 +3,8 @@ import { Button, Card, Container, Form, Row } from 'react-bootstrap'
 import axios from 'axios'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
+import Logo from "../../img/log.jpg";
+
 
 const EmailVerify = () => {
 
@@ -20,7 +22,7 @@ console.log('verryt',user);
    const submitHandler=async(e)=>{
      e.preventDefault()
     
-     const data=await axios.post("https://inbound-backend-api.herokuapp.com/auth/verifyemail",{otp,userId});
+     const data=await axios.post("http://localhost:5000/auth/verifyemail",{otp,userId});
 
      
         if(data){
@@ -43,26 +45,26 @@ console.log('verryt',user);
                
                 <div className='row'>
 
-                <div className='col-lg-6 my-5 ml-5'>
-                  <h3 className='loginLogo'>Bezziegram</h3>
-                  <span>
-                    Connect with friends and the world around you on Bezziegram.
-                  </span>
+                <div className="col-lg-6 my-5 ml-5">
+              <img src={Logo} alt="" />
+              <div className="Webname">
+                <h6>A place where ideas grow</h6>
+              </div>
                   </div>
                 <div className='col-lg-6'>
-                <Card style={{width: '18rem'}} className='my-5 cardcolor'>
+                <Card style={{width: '18rem',marginRight:'38rem'}} className='my-5 cardcolor'>
                  
       <Card.Body>
          <Form onSubmit={submitHandler}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>OTP</Form.Label>
+        <Form.Label>Please check your email</Form.Label>
         <Form.Control type="text" placeholder="Enter Otp" name='otp' value={otp} onChange={(e)=>setOTP(e.target.value)}/>
        
       </Form.Group>
 
       
       <div className='ms-auto'>
-      <Button variant="danger" type="submit">
+      <Button variant="warning" type="submit">
        Verify
       </Button>
 
