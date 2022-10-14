@@ -22,7 +22,7 @@ console.log('verryt',user);
    const submitHandler=async(e)=>{
      e.preventDefault()
     
-     const data=await axios.post("http://localhost:5000/auth/verifyemail",{otp,userId});
+     const data=await axios.post("https://inbound-backend-api.herokuapp.com/auth/verifyemail",{otp,userId});
 
      
         if(data){
